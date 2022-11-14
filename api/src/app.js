@@ -27,10 +27,10 @@ server.use((req, res, next) => {
 });
 
 // Check if DB is empty or old enough to update it
-server.use("/", async (req, res, next) => {
-  await updateIfNeeded();
-  next();
-});
+// server.use("/", async (req, res, next) => {
+//   await updateIfNeeded();
+//   next();
+// });
 
 server.use("/", routes);
 
